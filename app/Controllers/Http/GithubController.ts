@@ -8,7 +8,7 @@ export default class GithubController {
   }: HttpContextContract): Promise<void> {
     try {
       const page = Number(request.qs().page) ?? 1;
-      const per_page = Number(request.qs().per_page) ?? 100;
+      const per_page = Number(request.qs().per_page) ?? 50;
 
       const app = new App({
         appId: process.env.GITHUB_APP_ID!,
